@@ -1,4 +1,4 @@
-# Fermat's little theorem
+
 def fermat_theorem_mod(base, exp, prime):
     if exp == prime:
         return base

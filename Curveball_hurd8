@@ -1,0 +1,20 @@
+import fastecdsa
+from fastecdsa.point import Point
+from utils import listener
+
+FLAG = "crypto{????????????????????????????????????}"
+G = fastecdsa.curve.P256.G
+assert G.x, G.y == [0x6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296,
+                    0x4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5]
+
+class Challenge():
+    # ... (rest of the code)
+
+    def challenge(self, your_input):
+        host = self.connection_host(your_input)
+        if host == "www.bing.com":
+            return self.bing_it(FLAG)
+        else:
+            return self.bing_it(host)
+
+listener.start_server(port=13382)

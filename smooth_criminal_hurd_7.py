@@ -1,4 +1,4 @@
-# Import necessary modules
+# Import necessary module
 from Crypto.Cipher import AES
 from Crypto.Util.number import inverse
 from Crypto.Util.Padding import pad, unpad

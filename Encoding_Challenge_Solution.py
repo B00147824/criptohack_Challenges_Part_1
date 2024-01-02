@@ -43,9 +43,7 @@ def decoder(kind,text):
 for i in range(1,101):
     received = json_recv()
     
-    #print(f"Question {i}")
-    #print(f"Received type: {received['type']}")
-    #print(f"Received encoded value: {received['encoded']}")
+    #print(f"Question {i}")// (f"Received type: {received['type']}") // (f"Received encoded value: {received['encoded']}")
 
     to_send = {"decoded": decoder(received["type"],received["encoded"])}
     
